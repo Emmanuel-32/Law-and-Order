@@ -55,7 +55,7 @@ def svu(rounds):
 
         elif offense in ["Capital Murder","Murder","Hate Crime","Terrorism","Manslaughter","Arson",
                           "Assault","Robbery","Trafficking","Escape"] and sex == "F":
-            correct_prison = "Beford Hills"
+            correct_prison = "Bedford Hills"
 
         elif offense in ["Theft","Fraud","Drug Poss","Perjury","Weapon Poss","Abuse","Forgery",
                          "Soliciting","Drug Use","Larceny","Bribery","Money Laundering","Promoting Gambling",
