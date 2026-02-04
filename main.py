@@ -11,10 +11,10 @@ offenses = ["Capital Murder","Murder","Theft","Assault","Fraud","Kidnapping","Ma
             "Poss of a Controlled Substance","Judicial offense","Obsturction","Burglary",
             "False Incident Report","Stalking","Public Lewdness/Exposure","Sex Coersion"]
 
-mental = ["Y","N"]
-awaiting_trial = ["Y","N"]
+mental = ["Y","N","N"]
+awaiting_trial = ["Y","N","N"]
 gender = ["M","F"]
-on_registry = ["Y","N"]
+on_registry = ["Y","N","N"]
 
 def svu(rounds):
     score = 0
@@ -78,4 +78,4 @@ def svu(rounds):
 
     print(f"Game over, you got: {score}/{rounds}!")
 
-svu(10)
+svu(100)
