@@ -1,9 +1,9 @@
 import random
 # Albion is Fem Med. , Wallkill is Med. , Hillbrook is Juvie, Rikers is awaiting trial, Attica is Max.
-# Bellevue is hospital prison , Sing Sing is for sexual offenses
+# Bellevue is hospital prison , Sing Sing is for sexual offenses M, Taconic for sex offenses F
 #Bedford Hills is Fem Max.
 prisons = ["Rikers","Attica","Sing Sing","Bellevue","Hillbrook","Wallkill",
-           "Albion","Bedford Hills"]
+           "Albion","Bedford Hills","Taconic"]
 offenses = ["Capital Murder","Murder","Theft","Assault","Fraud","Kidnapping","Manslaughter","Arson","Drug Poss",
             "Hate Crime","Terrorism","Perjury","Weapon Poss","Sex Assualt","Abuse","Failed to register as Sex Offender",
             "Prostitution","Trafficking","Escape","Forgery","Soliciting","Drug Use","Larceny","Robbery",
@@ -46,8 +46,13 @@ def svu(rounds):
 
         elif offense in ["Endagering a child","Sex Assualt","Public Lewdness/Exposure","Sex Coersion",
                           "Sex Abuse","Kidnapping","Failed to register as Sex Offender","Poss of obscene images"
-                          "Prostitution"]:
+                          "Prostitution"] and  sex == "M":
             correct_prison = "Sing Sing"
+
+        elif offense in ["Endagering a child","Sex Assualt","Public Lewdness/Exposure","Sex Coersion",
+                          "Sex Abuse","Kidnapping","Failed to register as Sex Offender","Poss of obscene images"
+                          "Prostitution"] and  sex == "F":
+            correct_prison = "Taconic"
 
         elif offense in ["Capital Murder","Murder","Hate Crime","Terrorism","Manslaughter","Arson",
                           "Assault","Robbery","Trafficking","Escape"] and sex == "M":
@@ -79,4 +84,4 @@ def svu(rounds):
 
     print(f"Game over, you got: {score}/{rounds}!")
 
-svu(100)
+svu(50)
