@@ -18,7 +18,8 @@ on_registry = ["Y","N","N"]
 
 def svu(rounds):
     score = 0
-    print("Help Benson and Stabler put away these people!")
+    print("Help Benson and Stabler put away these people! \n")
+    print("Prisons to choose from: Rikers, Attica, Sing Sing, Bellevue, Hillbrook, Wallkill, Albion, Bedford Hills, Taconic \n")
     for i in range(rounds):
         print(f"Prisoner #{i + 1}")
         age = random.randint(12,60)
