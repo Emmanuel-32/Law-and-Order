@@ -20,7 +20,9 @@ def svu(rounds):
     score = 0
     print("Help Benson and Stabler put away these people! \n")
     print("Prisons to choose from: Rikers, Attica, Sing Sing, Bellevue, Hillbrook, Wallkill, Albion, Bedford Hills, Taconic \n")
+
     for i in range(rounds):
+        print("Ask Cabot for info by saying 'help'")
         print(f"Prisoner #{i + 1}")
         age = random.randint(12,60)
         sex = random.choice(gender)
@@ -42,6 +44,10 @@ def svu(rounds):
             correct_prison = "Bellevue"
         elif (int(age)) < 18:
             correct_prison = "Hillbrook"
+        elif offender == "Y" and sex == "M":
+            correct_prison = "Sing Sing"
+        elif offender == "Y" and sex == "F":
+            correct_prison = "Taconic"
 
         elif offense in ["Endagering a child","Sex Assualt","Public Lewdness/Exposure","Sex Coersion",
                           "Sex Abuse","Kidnapping","Failed to register as Sex Offender","Poss of obscene images"
@@ -77,9 +83,22 @@ def svu(rounds):
         if choice.lower() == correct_prison.lower():
             score += 1
             print("Great!\n")
+        
+        elif choice.lower() == "Help".lower():
+            print("Albion - Lesser offenses for women |"
+                  " Attica - Extreme offenses for men |"
+                  " Bedford Hills - Extreme offenses for women |"
+                  " Bellevue - Prison hosptial |"
+                  " Hillbrook - Juvenile facility "
+                  " Rikers - Holds until trial |"
+                  " Sing Sing - Sexual offenses for men |"
+                  " Taconic - Sexual offesnses for women |"
+                  " Wallkill - Lesser offenses for men |")
             
         else:
-            print(f"Correct prison was: {correct_prison}")
+            print(f"Correct prison was: {correct_prison}\n")
+
+        
 
     print(f"Game over, you got: {score}/{rounds}!")
 
