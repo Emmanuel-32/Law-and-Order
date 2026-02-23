@@ -1,7 +1,4 @@
 import random
-# Albion is Fem Med. , Wallkill is Med. , Hillbrook is Juvie, Rikers is awaiting trial, Attica is Max.
-# Bellevue is hospital prison , Sing Sing is for sexual offenses M, Taconic for sex offenses F
-#Bedford Hills is Fem Max.
 prisons = ["Rikers","Attica","Sing Sing","Bellevue","Hillbrook","Wallkill",
            "Albion","Bedford Hills","Taconic"]
 offenses = ["Capital Murder","Murder","Theft","Assault","Fraud","Kidnapping","Manslaughter","Arson","Drug Poss",
